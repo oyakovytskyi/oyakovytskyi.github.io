@@ -1,0 +1,193 @@
+@import "../base/variables";
+
+.testimonials {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 120px;
+  background-color: $primary-color;
+  gap: 100px;
+
+  &__title {
+    font-size: 56px;
+    line-height: 1.2;
+    margin: 0;
+
+    span {
+      background-color: $light-bg;
+      padding: 5px 10px;
+    }
+  }
+
+  &__controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+
+  &__btn {
+    width: 48px;
+    height: 48px;
+    border: 2px solid $border-color;
+    border-radius: 50%;
+    background: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 24px;
+    line-height: 1;
+
+    &:hover {
+      background: $background-color;
+      color: $primary-color;
+    }
+  }
+
+  &__content {
+    flex: 2;
+    position: relative;
+  }
+
+  &__quote {
+    display: none;
+    flex-direction: column;
+    padding-left: 60px;
+    max-width: 85%;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    img {
+      width: 73px;
+      height: 73px;
+      border-radius: 50%;
+    }
+  }
+
+  blockquote {
+    font-size: 18px;
+    margin: 20px 0;
+    position: relative;
+
+    .quote-icon {
+      position: absolute;
+      left: -50px;
+      top: 0;
+    }
+  }
+
+  &__pagination {
+    font-size: 14px;
+    color: $background-color;
+    font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0 40px;
+    gap: 40px;
+    align-items: start;
+    position: relative;
+
+    &__controls {
+      order: -1;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      right: 0;
+      z-index: 2;
+    }
+
+    &__btn {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.2);
+      color: $text-color;
+      font-size: 30px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .prev {
+      top: 60px;
+      left: 40px;
+    }
+
+    .next {
+      top: 60px;
+      right: 40px;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__quote {
+      max-width: 75%;
+      padding-left: 0;
+      align-items: center;
+      text-align: center;
+    }
+
+    &__profile {
+      flex-direction: column;
+      gap: 10px;
+
+      p {
+        font-family: $font-secondary;
+      }
+    }
+
+    blockquote {
+      font-size: 24px;
+      font-weight: bold;
+      .quote-icon {
+        position: static;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  @media (max-width: 320px) {
+    padding: 0 20px;
+    gap: 30px;
+
+    &__title {
+      font-size: 40px;
+    }
+
+    &__quote {
+      max-width: 100%;
+    }
+
+    &__btn {
+      position: relative;
+    }
+    blockquote {
+      height: 275px;
+    }
+    .prev {
+      top: 290px;
+      left: 30px;
+    }
+
+    .next {
+      top: 290px;
+      right: 30px;
+    }
+  }
+}

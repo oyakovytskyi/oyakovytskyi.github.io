@@ -1,0 +1,20 @@
+@import "../base/variables";
+
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: $success-color;
+  color: $primary-color;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

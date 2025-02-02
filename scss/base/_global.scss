@@ -1,0 +1,65 @@
+@import "variables";
+
+body {
+  font-family: $font-primary;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 1440px;
+  box-sizing: border-box;
+}
+
+button {
+  font-family: $font-primary;
+}
+
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 320px) {
+  .wrapper {
+    display: block;
+  }
+}
+
+.btn {
+  padding: 20px 64px;
+  border: none;
+  cursor: pointer;
+  border-radius: 60px;
+
+  &--primary {
+    background: $background-color;
+    color: $primary-color;
+  }
+
+  &--header {
+    padding: 13px 24px;
+  }
+
+  &--trade {
+    padding: 20px 64px;
+  }
+}
+
+.btn--primary {
+  &:hover {
+    background: $hover-color;
+  }
+
+  &:active {
+    background: $pressed-color;
+  }
+}

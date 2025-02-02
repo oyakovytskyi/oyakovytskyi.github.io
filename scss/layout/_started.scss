@@ -1,0 +1,100 @@
+@import "../base/variables";
+
+.getting-started {
+  padding: 140px 220px 140px 120px;
+  background-color: $primary-color;
+
+  &__title {
+    font-size: 56px;
+    margin: 0;
+    padding-bottom: 70px;
+
+    span {
+      background-color: $light-bg;
+    }
+  }
+
+  &__steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 60px 40px;
+    position: relative;
+  }
+
+  @media (max-width: 768px) {
+    padding: 120px 40px;
+  }
+
+  @media (max-width: 320px) {
+    padding: 80px 20px;
+
+    &__title {
+      font-size: 40px;
+      width: 85%;
+      padding-bottom: 32px;
+    }
+
+    &__steps {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+  }
+}
+
+.step {
+  padding: 20px;
+  width: 80%;
+  border: 2px solid $background-color;
+  border-radius: 30px;
+  text-align: left;
+  position: relative;
+  background: $primary-color;
+
+  &__number {
+    color: $background-color;
+  }
+
+  &__title {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+
+  &__text {
+    font-family: $font-secondary;
+    font-size: 14px;
+    color: $subtext-color;
+  }
+
+  &:nth-child(odd) {
+    justify-self: start;
+  }
+
+  &:nth-child(even) {
+    justify-self: end;
+    align-self: center;
+    transform: translateY(70%);
+  }
+
+  @media (max-width: 320px) {
+    padding: 24px;
+
+    &__title {
+      font-size: 18px;
+      margin: 8px 0 24px;
+    }
+
+    &__text {
+      line-height: 1.75;
+    }
+
+    &:nth-child(even),
+    &:nth-child(odd) {
+      justify-self: center;
+      align-self: center;
+      transform: none;
+    }
+  }
+}
