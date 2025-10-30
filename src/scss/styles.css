@@ -103,6 +103,7 @@ p {
   width: 100%;
   max-width: 1440px;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 .header__container {
   display: flex;
@@ -466,6 +467,7 @@ p {
   color: #333333;
   max-width: 1440px;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 .footer__container {
   display: grid;
